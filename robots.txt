@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /img/*
+Disallow: /css/*
+Disallow: /vendor/*
+Disallow: /app/*

@@ -1,0 +1,39 @@
+      _
+     (_)
+  ___ _ ___ ___  ___  _ __
+ / _ \ / __/ __|/ _ \| '_  \
+|  __/ \__ \__ \ (_) | | | |
+ \___|_|___/___/\___/|_| |_|
+
+/* PROGRAMMER */
+Name    : Eisson Alipio [Developer - Designer - Creative - Backend - Frontend - Thinker]
+Location: Lima, Peru
+Twitter : @mekix
+Email   : eisson.alipio@gmail.com
+Group   : https://www.facebook.com/groups/csluni/
+Web     : http://csluni.org
+
+/* SITE */
+Last update: 2015/03/06 17:05
+Language: Spanish / English / Chininglish
+Doctype:HTML5
+IDE: WebStorm
+Standards: HTML5, CSS3, EcmaScript5
+Components: Bootstrap, AngularJS
+
+/* TEAM */
+Jair Fuertes Lino
+Location: SMP
+
+George Morales
+Location: SMP
+
+Luis Linares
+Location: SJL
+
+Jhon Centeno Romero
+Location: SJL
+
+Daniel Baldeon
+Location: VITARTE
+

@@ -1,0 +1,67 @@
+<div class="row">
+	<div class="col-md-6">
+		<p>Registro de usuario</p>
+		<input type="text" ng-model='user.name'>
+		<input type="text" ng-model='user.mail'>
+		<input type="text" ng-model='user.curse'>
+		<input type="text" ng-model='user.origin'>
+		<input type="text" ng-model='user.phone'>
+	</div>
+	<br>
+</div>
+
+
+			<!-- ===================================================================================================================== -->
+        <div class="container" nv-file-drop="" uploader="uploader"  filters="queueLimit, customFilter">
+
+            <div class="row">
+
+                <div class="col-md-12" style="margin-bottom: 40px">
+					<button
+						class="btn btn-success"
+						ng-file-select
+						ng-model="files"
+						accept="*.pdf,*.doc,*.docx,*.xls,*.xlsx, *.zip, *.rar"
+						ng-file-change="upload(files)"
+						ng-multiple="false">
+						Adjuntar Boucher
+					</button>
+					<br>
+					<br>
+                    <table class="table" ng-show="files.length > 0" >
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Size</th>
+                                <th>progress</th>
+                                <th>status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="f in files">
+								<td data-ng-show="f.name">{{f.name}}</td>
+								<td data-ng-show="f.size">{{ f.size/1024/1024|number:2 }} MB</td>
+                                <td>
+                                    <div class="progress text-center">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': f.progress + '%' }">{{f.progress}}%</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span ng-show="f.isSuccess">
+                                    	<i class="fa fa-check"></i>
+                                    </span>
+                                    <span ng-hide="f.isSuccess">
+                                    	<i class="fa fa-cog fa-spin"></i>
+                                    	<button
+                                    		class="btn btn-warning btn-xs"
+                                    		ng-click="f.upload.abort() ; f.isSuccess = true"
+                                    		ng-show="f.upload != null && f.progress < 100">Abortar</button>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+			<!-- ===================================================================================================================== -->

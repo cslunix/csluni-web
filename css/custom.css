@@ -1,0 +1,38 @@
+/** Scrollbar **/
+::-webkit-scrollbar {
+  width:4px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(109, 109, 109);
+  border-radius: 1ex;
+}
+::-webkit-scrollbar-track-piece{
+  background-color: rgb(220,220,220);
+}
+::-webkit-scrollbar:horizontal{
+  display:none;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/** **/
+#view{
+	/**margin-top: 100px;**/
+	/**text-align: center;**/
+}
+
+a.navbar-brand img{
+	top: -7px !important;
+	position: relative;
+}
+
+.active{
+  border-bottom:2px solid #32C8EE;
+}
+/**ul.dropdown-menu {
+background:#080808 ;
+color:#FFF !important;
+}

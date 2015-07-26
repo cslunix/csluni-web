@@ -1,0 +1,83 @@
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed" >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <div>
+        <a class="navbar-brand" href="#/">
+          <img src="img/csl.png" width="50" height="32" alt="Comunidad de Software Libre de la UNI" />
+        </a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse" collapse="navbarCollapsed">
+      <ul class="nav navbar-nav">
+        <li ng-class="{active:isSet(1)}" ><a href="#/"         ng-click="setTab(1)"><i class="fa fa-home"></i> Home</a></li>
+        <!--
+        <li ng-class="{active:isSet(2)}" ><a href="#/cursos"   ng-click="setTab(2)"><i class="fa fa-book"></i> Cursos</a></li>
+        -->
+        <li class="dropdown" dropdown ng-class="{active:isSet(2)}" >
+          <a href class="dropdown-toggle" dropdown-toggle ><i class="fa fa-book"></i> Cursos<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Software</li>
+            <li><a ng-click="setTab(2)" href="#/cursos/linux">GNU/Linux</a></li>
+            <li><a ng-click="setTab(2)" href="#/cursos/php">PHP &amp; MySQL</a></li>
+            <li><a ng-click="setTab(2)" href="#/cursos/hacking">Ethical Hacking</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Hardware</li>
+            <li><a ng-click="setTab(2)" href="#/cursos/arduino">Arduino</a></li>
+            <li><a ng-click="setTab(2)" href="#/cursos/raspberry">Raspberry</a></li>
+          </ul>
+        </li>
+
+       
+       
+       
+       <li class="dropdown" dropdown ng-class="{active:isSet(2)}" >
+          <a href class="dropdown-toggle" dropdown-toggle ><i class="fa fa-bullhorn"></i> Eventos<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          
+            <li><a ng-click="setTab(8)" href="#/hpd">Hack Party Day</a></li>
+            <li><a ng-click="setTab(9)" href="#/autocapa">Autocapacitaciones</a></li>
+            <li><a ng-click="setTab(10)" href="#/capa">Capacitaciones</a></li>
+            <li><a ng-click="setTab(10)" href="#/sesiones">Sesiones Semanales</a></li>
+            
+          </ul>
+        </li>
+
+  <li class="dropdown" dropdown ng-class="{active:isSet(2)}" >
+          <a href class="dropdown-toggle" dropdown-toggle ><i class="fa fa-paperclip"></i> Productos<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          
+            <li><a ng-click="setTab(8)" href="#/manuales">Manuales</a></li>
+            <li><a ng-click="setTab(9)" href="#/videos">Videos</a></li>
+            <li><a ng-click="setTab(10)" href="#/herramientas">Herramientas</a></li>
+            <li><a ng-click="setTab(10)" href="#/proyectos">Proyectos</a></li>
+            
+          </ul>
+        </li>
+
+
+
+
+ <li class="dropdown" dropdown ng-class="{active:isSet(2)}" >
+          <a href class="dropdown-toggle" dropdown-toggle ><i class="fa fa-users"></i> Nosotros<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                      <li><a ng-click="setTab(5)" href="#/contacto">Contacto</a></li>
+            <li><a ng-click="setTab(6)" href="#/about">Galeria de Fotos</a></li>
+            <li><a ng-click="setTab(7)" href="#/mapa">Encuentranos</a></li>
+            
+          </ul>
+        </li>
+
+ 
+
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>

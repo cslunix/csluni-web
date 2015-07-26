@@ -1,0 +1,88 @@
+<style>
+.icono {
+    background: transparent;
+    border: none;
+    left: 35px;
+    position: relative;
+    height: 1px;
+    z-index: 10;
+}
+textarea, input.form-control{
+    padding-left: 30px;
+    border-radius: 5px !important;
+}
+
+.toma{
+    padding: 15px;
+}
+
+textarea{
+    padding-left: 25px !important;
+    resize: none;
+}
+
+.hopes{
+    top:-40px;
+}
+</style>
+
+<div class="row" ng-hide='confirmacion'>
+    <h2>Registro para el Hack-Party </h2>
+    <br>
+    <div class="col-md-4 col-sm-6">
+        <form ng-submit='registrar(user)'>
+            <div class="input-group">
+                <span class="input-group-addon icono"><i class='fa fa-user'></i></span>
+                <input type="text" class="form-control" placeholder="Nombres" ng-model='user.names' autofocus  required />
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon icono"><i class='fa fa-envelope'></i></span>
+                <input type="email" class="form-control" placeholder="Correo" ng-model='user.mail' required />
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon icono"><i class='fa fa-phone'></i></span>
+                <input type="tel" class="form-control" placeholder="Celular" ng-model='user.phone' required />
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon icono"><i class='fa fa-building'></i></span>
+                <input type="text" class="form-control" placeholder="Procedencia, ejemplo: UNMSM" ng-model='user.procedencia' required />
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon icono hopes"><i class='fa fa-comment-o'></i></span>
+                <textarea class="form-control" placeholder="Que esperas del evento?" ng-model='user.hopes' cols="30" rows="4" maxlength="200" spellcheck ="false" required ></textarea>
+                <div class="pull-right">
+                    <span class="label" ng-class='(200-user.hopes.length) > 190 ? "label-success" : ( (200-user.hopes.length) > 160 ? "label-primary": ( (200-user.hopes.length) > 130 ) ? "label-warning" : "label-danger" ) '>{{200 - user.hopes.length}} caracteres restantes</span>
+                </div>
+            </div>
+            <br>
+            <div class='text-center'>
+                <button type='submit' class='btn btn-primary btn-lg'>
+                    <i class='fa fa-save'></i> Registrarme en el Evento
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8 col-sm-6 hidden-xs">
+        <p>El evento se realizara el <b>Viernes 27 de Marzo</b> desde las 15:30 Horas en el auditorio de la facultad de ingenieria Electrica y Electronica de la Universidad Nacional de Ingenieria</p>
+        <p class="text-center">
+            <img class="img-responsive img-rounded" src="img/events/marzo/hackv3.jpg" />
+        </p>
+    </div>
+</div>
+
+
+<div ng-show='confirmacion'>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-primary toma" >{{confirmacion}}</p>
+        </div>
+        <div class="col-md-offset-3 col-md-6">
+            <img class="img-responsive img-rounded" src="img/events/marzo/hackv3.jpg" />
+        </div>
+
+    </div>
+</div>
